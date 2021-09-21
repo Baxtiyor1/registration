@@ -29,6 +29,10 @@ body {
   background-color: #e9e8e8;
 }
 
+h1 {
+  margin-bottom: 10px;
+}
+
 .form {
   padding: 20px;
   display: -webkit-box;
