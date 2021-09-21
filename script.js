@@ -52,6 +52,6 @@ elBtn.addEventListener('click', function(e){
     elUserName.value = ''
     elUserAge.value = ''
     elUserProf.value = ''
-    elGender.value = ''
+    elGender.value = 'Gender'
     elAboutUser.value = ''
 })
