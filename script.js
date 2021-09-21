@@ -4,16 +4,31 @@ const elUserAge = elForm.querySelector('#user_age')
 const elUserProf = elForm.querySelector('#user_profession')
 const elGender = elForm.querySelector('#gender')
 const elAboutUser = elForm.querySelector('#about_user')
+const elUserImg = elForm.querySelector('#user_img')
 const elBtn = elForm.querySelector('#btn')
 const elMenu = document.querySelector('#menu')
+
+
+let upload_img = "";
+elUserImg.addEventListener('change', function(){
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+        upload_img = reader.result;
+        document.querySelector('#display_image').style.backgroundImage = `url(${upload_img}`
+    })
+    reader.readAsDataURL(this.files[0]);
+})
+
 
 
 elBtn.addEventListener('click', function(e){
     e.preventDefault()
     elMenu.setAttribute('class', 'menu')
+    
+    
     const data = [
         {
-            imgSrc: 'http://picsum.photos/220/150?random=1',
+            eldiv: '',
             user_name: elUserName.value,
             user_age: elUserAge.value,
             user_prof: elUserProf.value,
@@ -24,7 +39,7 @@ elBtn.addEventListener('click', function(e){
     
     data.forEach((data) => {
         let newLi = document.createElement('li');
-        let newImg = document.createElement('img');
+        let newdiv = document.createElement('div');
         let Name = document.createElement('p');
         let age = document.createElement('p');
         let prof = document.createElement('p');
@@ -33,14 +48,14 @@ elBtn.addEventListener('click', function(e){
         
         newLi.setAttribute('class', 'active_li')
         Name.textContent = data.user_name;
-        newImg.setAttribute('src', data.imgSrc)
+        newdiv.setAttribute('id', 'display_image')
         age.textContent = 'Age: ' + data.user_age;
         prof.textContent = data.user_prof;
         gender.textContent = 'Gender: ' + data.user_gender;
         about.textContent = data.about_user;
         
-        newLi.appendChild(newImg)
         newLi.appendChild(Name)
+        newLi.appendChild(newdiv)
         newLi.appendChild(age)
         newLi.appendChild(prof)
         newLi.appendChild(gender)
