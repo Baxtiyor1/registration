@@ -34,9 +34,9 @@ elBtn.addEventListener('click', function(e){
         newLi.setAttribute('class', 'active_li')
         Name.textContent = data.user_name;
         newImg.setAttribute('src', data.imgSrc)
-        age.textContent = data.user_age;
+        age.textContent = 'Age: ' + data.user_age;
         prof.textContent = data.user_prof;
-        gender.textContent = data.user_gender;
+        gender.textContent = 'Gender: ' + data.user_gender;
         about.textContent = data.about_user;
         
         newLi.appendChild(newImg)
