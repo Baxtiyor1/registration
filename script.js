@@ -26,6 +26,7 @@ elBtn.addEventListener('click', function(e){
     elMenu.setAttribute('class', 'menu')
     
     
+    
     const data = [
         {
             eldiv: '',
