@@ -22,6 +22,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: cornflowerblue;
+    box-shadow: 5px 5px 5px cornflowerblue, -5px -5px 5px cornflowerblue, -5px 5px 5px cornflowerblue, 5px -5px 5px cornflowerblue;
 }
 .input{
     width: 247px;
