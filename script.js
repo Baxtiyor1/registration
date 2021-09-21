@@ -48,4 +48,10 @@ elBtn.addEventListener('click', function(e){
         
         elMenu.appendChild(newLi)
     })
+    
+    elUserName.value = ''
+    elUserAge.value = ''
+    elUserProf.value = ''
+    elGender.value = ''
+    elAboutUser.value = ''
 })

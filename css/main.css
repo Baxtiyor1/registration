@@ -92,6 +92,7 @@ body {
 .active_li {
   border: 2px solid #0c52e9;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .active_li p {
