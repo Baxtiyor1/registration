@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Areal", sans-serif;
+  background-color: #e9e8e8;
+}
+
+.wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: cornflowerblue;
+}
+
+.input {
+  width: 247px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+}
+
+.textarea {
+  width: 247px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  resize: none;
+}
+
+.btn {
+  height: 30px;
+  width: 80px;
+  border: none;
+  background-color: cyan;
+  cursor: pointer;
+}
+
+.menu {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.active_li {
+  border: 2px solid #0c52e9;
+  padding: 10px;
+}
+
+.active_li p {
+  width: 100%;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #0c52e9;
+}
+/*# sourceMappingURL=main.css.map */
