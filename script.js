@@ -20,13 +20,12 @@ elUserImg.addEventListener('change', function(){
 })
 
 
-
 elBtn.addEventListener('click', function(e){
     e.preventDefault()
     elMenu.setAttribute('class', 'menu')
     
     
-    
+
     const data = [
         {
             eldiv: '',
