@@ -56,6 +56,7 @@ h1 {
   outline: none;
   border: none;
   padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .textarea {
@@ -64,6 +65,7 @@ h1 {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
+  border-radius: 5px;
   resize: none;
 }
 
@@ -72,6 +74,7 @@ h1 {
   width: 80px;
   border: none;
   background-color: cyan;
+  border-radius: 5px;
   cursor: pointer;
 }
 
