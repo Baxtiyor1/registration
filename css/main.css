@@ -9,7 +9,6 @@
 
 body {
   font-family: "Areal", sans-serif;
-  background-color: #e9e8e8;
 }
 
 .wrapper {
@@ -27,6 +26,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #e9e8e8;
 }
 
 .form {
