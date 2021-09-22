@@ -10,21 +10,21 @@ const elMenu = document.querySelector('#menu')
 
 
 let upload_img = "";
-elUserImg.addEventListener('change', function(){
+elUserImg.addEventListener('change', function () {
     const reader = new FileReader();
     reader.addEventListener('load', () => {
         upload_img = reader.result;
-        document.querySelector('#display_image').style.backgroundImage = `url(${upload_img}`
+        document.querySelector('.display_image').style.backgroundImage = `url(${upload_img}`
     })
     reader.readAsDataURL(this.files[0]);
 })
 
 
-elBtn.addEventListener('click', function(e){
+elBtn.addEventListener('click', function (e) {
     e.preventDefault()
     elMenu.setAttribute('class', 'menu')
-    
-    
+
+
 
     const data = [
         {
@@ -36,7 +36,7 @@ elBtn.addEventListener('click', function(e){
             about_user: elAboutUser.value,
         }
     ]
-    
+
     data.forEach((data) => {
         let newLi = document.createElement('li');
         let newdiv = document.createElement('div');
@@ -45,25 +45,26 @@ elBtn.addEventListener('click', function(e){
         let prof = document.createElement('p');
         let gender = document.createElement('p');
         let about = document.createElement('p');
-        
+
         newLi.setAttribute('class', 'active_li')
         Name.textContent = data.user_name;
-        newdiv.setAttribute('id', 'display_image')
+        newdiv.setAttribute('class', 'display_image')
+        newdiv.setAttribute('style', `background-image: url(${upload_img})`);
         age.textContent = 'Age: ' + data.user_age;
         prof.textContent = data.user_prof;
         gender.textContent = 'Gender: ' + data.user_gender;
         about.textContent = data.about_user;
-        
+
         newLi.appendChild(Name)
         newLi.appendChild(newdiv)
         newLi.appendChild(age)
         newLi.appendChild(prof)
         newLi.appendChild(gender)
         newLi.appendChild(about)
-        
+
         elMenu.appendChild(newLi)
     })
-    
+
     elUserName.value = ''
     elUserAge.value = ''
     elUserProf.value = ''
